@@ -1,16 +1,16 @@
 import path from "path";
 import { defineConfig } from "vite";
-import packageJson from "./package.json";
+import packageName from "./package-name.json";
 
 const getPackageName = () => {
-  return packageJson.name;
+  return packageName.name;
 };
 
 const getPackageNameCamelCase = () => {
   try {
     return getPackageName().replace(/-./g, (char) => char[1].toUpperCase());
   } catch (err) {
-    throw new Error("Name property in package.json is missing.");
+    throw new Error("Name property in package-name.json is missing.");
   }
 };
 

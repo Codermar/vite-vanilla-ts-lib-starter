@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const packageJson = require("./package.json");
+const packageName = require("./package-name.json");
 
 const getPackageName = () => {
-  return packageJson.name;
+  return packageName.name;
 };
 
 const config = {
